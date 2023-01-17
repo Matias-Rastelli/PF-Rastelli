@@ -1,0 +1,256 @@
+/* Media para index */
+
+@media screen and (max-width: 1300px){
+    .header nav ul{
+        padding: 5px;
+        gap: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    main h1{
+        text-align: center;
+    }
+    main p.slogan {
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    body header div{
+        transform: scale(0.75);
+    }
+    .art-fig{
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+    .art-text{
+        font-size: 12px;
+    }
+    .figure1{
+        transform: scale(0.6);
+    }
+    main article{
+        gap: 25px;
+    }
+
+    .social ul li {
+        transform: scale(0.75);
+    }
+
+    .social ul {
+        width: 200px;
+    }
+
+    .newsletter { 
+        display: none;
+    }
+
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+      "social copyright";
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .header{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 140px;
+        padding-bottom: 10px;
+    }
+
+    .figure1{
+        transform: scale(0.5);
+    }
+
+    main h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    main p.slogan {
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+    }
+    
+    .art-fig{
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+    }
+    .art-text{
+        font-size: 12px;
+    }
+
+    main section article {
+        width: 80%;
+    }
+
+    .sector2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sector2 article{
+        margin-bottom: 10px;
+    }
+
+    body{
+    background-repeat: repeat-y;
+    }
+
+    .social ul li {
+        transform: scale(0.75);
+    }
+
+    .social ul {
+        width: 200px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "social"
+            "copyright";
+    }
+
+
+}
+
+@media screen and (max-width: 600px){
+
+    body header div {
+        transform: scale(1);
+    }
+    .header{
+        justify-content: start;
+        flex-wrap: nowrap;
+    }
+    .header nav ul{
+        flex-direction: column;
+    }
+
+    .active {
+        border: none;
+    }
+
+    .sector1 {
+        flex-direction: column;
+        margin-bottom: -100px
+    }
+
+    main h1{
+        margin-top: 20px;
+    }
+    main p.slogan {
+        margin-bottom: 10px
+    }
+    main .figure1{
+        margin-top: -100px;
+    }
+
+    main article{
+        gap: 10px;
+    }
+
+    section.setor1 {
+        margin-bottom: -100px;
+    }
+
+}
+
+/* Media para tratamientos */
+
+@media screen and (max-width: 1300px){
+    .main-tratamientos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        gap: 4px;
+        margin: 8px 0px;
+    }
+    
+    .main-tratamientos figure img{
+        width: 150px;
+        height: auto;
+    }
+    
+    .main-tratamientos article p{
+        width: 650px;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .main-tratamientos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: stretch;
+        gap: 4px;
+        margin-top: 35px;
+
+    }
+    
+    .main-tratamientos figure img{
+        width: 150px;
+        height: auto;
+    }
+    
+    .main-tratamientos article p{
+        height: 150px;
+        width: 650px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+
+
+}
+
+
+@media screen and (max-width: 600px){
+    .main-tratamientos{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: stretch;
+        gap: 4px;
+        margin-top: 35px;
+
+    }
+    
+    .main-tratamientos figure img{
+        width: 150px;
+        height: auto;
+    }
+    
+    .main-tratamientos article p{
+        height: 150px;
+        width: 650px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .main-tratamientos article{
+        flex-direction: column;
+    }
+
+    .main-tratamientos .article2 figure, .main-tratamientos .article4 figure{
+        order: 1;
+    }
+    
+    .main-tratamientos .article2 p, .main-tratamientos .article4 p{
+        order: 2;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,67 @@
+footer {
+    grid-area: footer;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 80px;
+    background: $fondoOpacidad15;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    grid-template-areas: 
+    "newsletter social copyright"; 
+        
+    .newsletter { 
+        grid-area: newsletter; 
+        justify-self: center;
+
+        .form-footer {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px 0px 0px 5px;
+            border: solid 1px black;
+            transition: 0.2s;
+            text-indent: 5px;
+            &:focus{
+                width: 220px;
+            }  
+        }
+
+        .send-button-footer{
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+
+            &:hover{
+                text-shadow: -2px 1px 10px rgb(0, 0, 0);
+            }
+        }
+    }
+
+    .social { 
+        grid-area: social; 
+        justify-self: center;
+        
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 50%;
+            a {
+                text-decoration: none;
+                transform: scale(1);
+                transition: all 0.2s;
+            img:hover{
+                transform: scale(1.2);
+                filter: invert(90%);
+            }            
+            }
+        }
+    }
+
+    .copyright {
+        grid-area: copyright; 
+        justify-self: center;
+        font-size: 18px;
+    }
+}
