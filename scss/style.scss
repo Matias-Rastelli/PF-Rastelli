@@ -1,6 +1,12 @@
 @import "./base/reset";
 @import "./components/variables";
+@import "./components/mixing";
 @import "./layout/header";
 @import "./layout/main";
 @import "./layout/footer";
+@import "./pages/index";
+@import "./pages/quienes-somos";
+@import "./pages/promociones";
+@import "./pages/tratamientos";
+@import "./pages/contactame";
 @import "./medias/media"

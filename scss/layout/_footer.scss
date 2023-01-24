@@ -33,7 +33,7 @@ footer {
             cursor: pointer;
 
             &:hover{
-                text-shadow: -2px 1px 10px rgb(0, 0, 0);
+                text-shadow: $hoverShadow;
             }
         }
     }

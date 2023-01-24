@@ -1,0 +1,63 @@
+.main-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    section{
+        display: flex;
+    }
+
+    .promo-principal{
+        flex-direction: row;
+        @include flex-center
+        gap: 5%;    
+        
+        p{
+            font-size: 25px;
+            font-weight: bold;
+            width: 30vw;
+            text-align: center;
+        }
+        img{
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .promo-2-3{
+        flex-direction: row;
+        justify-content: space-around;
+
+        .promo2, .promo3, .mercadopago{
+            width: auto;
+            height: auto;
+            position: relative;
+                
+            img {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .promo2::after, .promo3::after{
+        font-size: 20px;
+        font-weight: bolder;
+        position: absolute;
+        height: auto;
+        width: auto;   
+        margin: 3px; 
+        bottom: 5%;
+        text-align: center; 
+        text-shadow: 2px 2px 2px white;
+        background-color: rgba(211, 211, 211, 0.5);
+        border-radius: 10px;
+
+    }
+    .promo2::after{
+        content: "2 x 1 todos los martes pagando en EFECTIVO";
+    }
+    
+    .promo3::after{
+        content: "Si sos socio del club Los Andes, presentando tu carnet 30% de descuento!";
+    }
+}

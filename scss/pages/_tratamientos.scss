@@ -1,0 +1,30 @@
+.main-tratamientos{
+    display: flex;
+    flex-direction: column;
+    @include flex-center;
+    gap: 4px;
+    margin: 25px 0px;
+
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }        
+        }
+
+    figure img{
+        width: 250px;
+        height: 180px;
+    }
+
+    p{
+        width: 650px;
+        font-size: 18px;
+        text-align: left;
+    }
+}
