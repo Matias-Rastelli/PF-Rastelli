@@ -1,6 +1,11 @@
 /* Media para index */
 
 @media screen and (max-width: 1300px){
+    
+    .animadoEntrada{
+        animation: none;
+    }
+
     header {
         img{
             transform: scale(0.75);
@@ -67,6 +72,10 @@
 }
 
 @media screen and (max-width: 900px){
+
+    .animadoEntrada{
+        animation: none;
+    }
     header{
         flex-wrap: wrap;
         justify-content: center;
@@ -133,6 +142,10 @@
 }
 
 @media screen and (max-width: 600px){
+
+    .animadoEntrada{
+        animation: none;
+    }
     
     header {
         justify-content: start;
