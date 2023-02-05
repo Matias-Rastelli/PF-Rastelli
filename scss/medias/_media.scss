@@ -1,268 +1,472 @@
 /* Media para index */
 
 @media screen and (max-width: 1300px){
-    
-    .animadoEntrada{
+
+    .animadoEntrada, .frase, .animado, .figure1, .sector2{
         animation: none;
     }
 
-    header {
-        img{
-            transform: scale(0.75);
-        }
-        nav ul{
-        padding: 5px;
-        gap: 10px;
-        margin-right: 10px;
-        font-size: 16px;
-        }
-    }
-
-    .footer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "social copyright";
-
-        .social ul {
-            width: 200px;
-            
-            li {
-                transform: scale(0.75);
-            }
-        }
-        .newsletter { 
-            display: none;
-        }
-    }
-
-    .main{
-        .figure1{
-            transform: scale(0.6);
-        }
-        .sector1{   
-            h1{
-            text-align: center;
-            }
-            p{
-            font-size: 20px;
-            font-weight: normal;
-            text-align: center;
-            }
-        }
-
-        .sector2{
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 25px;
-            gap: 30px;
-
-            article{
-                width: 70%;
-            }
-            .art-fig{
-                width: 100px;
-                height: 100px;
-                display: block;
-            }
-            .art-text{
-                font-size: 12px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 900px){
-
-    .animadoEntrada{
-        animation: none;
-    }
     header{
-        flex-wrap: wrap;
-        justify-content: center;
-        height: 140px;
-        padding-bottom: 10px;
-    }
-
-    .footer{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "social"
-        "copyright";
-        
-
-        .social ul {
-            width: 200px;
-            
-            li {
-                transform: scale(0.75);
-            }
-        }
-    
-        .newsletter { 
-            display: none;
-        }
-    }
-    .main{
-
-        .sector1{
-    
-            h1{
-            text-align: center;
-            }
-            p{
-            font-size: 20px;
-            font-weight: normal;
-            text-align: center;
-            }
-            .figure1{
-                transform: scale(0.6);
-            }
-        }
-
-        .sector2{
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 25px;
-            gap: 30px;
-            
-            article{
-                width: 70%;
-            }
-            .art-fig{
-                width: 100px;
-                height: 100px;
-                display: block;
-            }
-            .art-text{
-                font-size: 12px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 600px){
-
-    .animadoEntrada{
-        animation: none;
-    }
-    
-    header {
-        justify-content: start;
-        flex-wrap: nowrap;
-
-        img{
-            transform: scale(1);
-        }
         nav ul{
-        flex-direction: column;
-        padding: 5px;
-        gap: 10px;
-        margin-right: 10px;
-        font-size: 16px;
+            font-size: 24px;
         }
-        .active {
-            border: none;
+
+        div{
+            margin-left: 0;
         }
     }
-
+    
     .main{
-        .sector1 {
+        gap: 40px;
+        .sector1{
             flex-direction: column;
             gap: 20px;
-            
-            h1{
-                margin-top: 20px;
-            }
-            p{
-                margin-bottom: 10px
+        }
+        .sector2{
+            flex-direction: column;
+            article{
+                width: 80%;
             }
         }
     }
+}
+@media screen and (max-width: 1100px){
+
+    .animadoEntrada, .frase, .animado, .figure1, .sector2{
+        animation: none;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 150px;
+        justify-content: space-evenly;
+
+        nav ul{
+            font-size: 24px;
+            width: 100%;
+        }
+
+        div{
+            margin-left: 0;
+        }
+    }
+
+    footer{
+    .copyright {
+        font-size: 14px;
+    }
+    }
+
+    .main-quienes-somos {
+
+        .section-quienes-somos {
+            flex-direction: column;
+            p {
+                font-size: 18px;
+            }
+        }
+        .section-creemos{
+    
+            h3{
+                font-size: 30px;
+                font-weight: bold;
+            }
+            
+            p{
+                width: 800px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .main-tratamientos{
+        margin-top: 40px;
+        p{
+            width: 500px;
+            font-size: 14px;
+        }
+
+        figure{
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    .main-promo{
+        margin-top: 50px;
+        .promo-2-3{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .main-contactame{
+        margin-top: 30px;
+        h2{
+            font-size: 40px;
+        }
+    }
+
+}
+@media screen and (max-width: 900px){
+
+    .animadoEntrada, .frase, .animado, .figure1, .sector2{
+        animation: none;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
+    .animadoEntrada, .frase, .animado, .figure1, .sector2{
+        animation: none;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 240px;
+        justify-content: space-evenly;
+
+        div{
+            margin: 0;
+        }
+
+        nav {
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                gap: 5px;
+            }
+    }
+}
+    .main{
+
+        margin-top: 110px;
+        gap: 20px;
+        margin-bottom: 25px;
+
+        .sector1{
+            flex-direction: column;
+            div{
+                width: 90%;
+                h1{
+                    font-size: 50px;
+                }
+                p{
+                    font-size: 16px;
+                    white-space: normal;
+                    text-align: center;
+                }
+            }
+            img{
+                height: 250px;
+                width: auto;
+            }
+        }
+
+        section{
+            flex-direction: column;
+            gap: 5px;
+
+            article{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 5px;
+
+                figure{
+                    height: 122px;
+                }
+
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .figure1{
+        position: relative;
+        overflow: hidden;
+        width: auto;
+        height: auto;
+
+        &::after{
+            display: none;
+        }
+        &::before{
+            content: "Tratamientos";
+            position: absolute;
+            bottom: 5px;
+            left: 25px;
+            z-index: 1;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    }
+
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas: 
+            "social"
+            "copyright"; 
+        
+        .newsletter{
+            display: none;
+        }
+
+        .social{
+            margin-top: 10px;
+        }
+    }
+    
 }
 
 /* Media para tratamientos */
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 450px){
     .main-tratamientos{
+        margin-top: 130px;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
-        align-content: center;
-        gap: 4px;
-        margin: 8px 0px;
-
-        figure img{
-            width: 150px;
-            height: auto;
-        }
-        article p{
-            width: 650px;
-            font-size: 14px;
-            text-align: left;
-        }
-    }
-
-}
-
-@media screen and (max-width: 900px){
-    .main-tratamientos{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: center;
-        justify-content: stretch;
-        gap: 4px;
-        margin-top: 35px;
-
-        figure img{
-            width: 150px;
-            height: auto;
-        }
+        justify-content: center;
+        gap: 20px;
 
         article{
-            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            border-bottom: 1px solid black;
+            gap: 5px;
 
-            p{
-            height: 150px;
-            width: 650px;
-            font-size: 12px;
-            text-align: left;
+            &:nth-child(even){
+                flex-direction: column;
+                p{
+                    text-align: justify;
+                }
+            }  
         }
 
+        figure{
+            width: 300px;
+        }
+
+        p{
+            font-size: 14px;
+            width: 300px;
+        }
     }
+
+    .tratamiento1{
+        &::after{
+            display: none;
+        }        
+        &::before{
+            content: "Masaje Sueco";
+            z-index: 1;
+            position: absolute;
+            font-size: 20px;
+            top: 2px;
+            left: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+    }
+    .tratamiento2{
+        &::before{
+            content: "Masaje de piernas";
+        }
+    }
+    .tratamiento3{
+        &::before{
+            content: "Tratamiento facial";
+        }
+    }
+    .tratamiento4{
+        &::before{
+            content: "Masaje con piedras calientes";
+        }
+    }
+    .tratamiento5{
+        &::before{
+            content: "Masaje con mascarilla de barro";
+        }
+    }
+    .tratamiento6{
+        &::before{
+            content: "Masaje de espalda";
+        }
     }
     
+    
+
 }
 
+/* Media para quienes somos */
 
-@media screen and (max-width: 600px){
-    .main-tratamientos{
+@media screen and (max-width: 450px){
+    .main-quienes-somos{
+        margin-top: 130px;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
-        align-content: center;
-        justify-content: stretch;
-        gap: 4px;
-        margin-top: 35px;
 
-        figure img{
-            width: 300px;
-            height: auto;
-        }
-        article{
-            flex-direction: column;
-            justify-content: center;
+        .section-quienes-somos{
             display: flex;
-            flex-wrap: wrap;
-            align-content: center;
-            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+            div{
+                width: 300px;
+                height: 450px;
+            }
             p{
-                height: 150px;
-                width: 650px;
-                font-size: 14px;
+                font-size: 18px;
+                width: 300px;
+            }
+        }
+
+        .section-creemos{
+            gap: 10px;
+            h3{
+                font-size: 24px;
+                width: 300px;
                 text-align: center;
+            }
+            p{
+                font-size: 18px;
+                width: 300px;
+                text-align: justify;
+            }
+        }
+        .section-objetivos{
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            div{
+                width: 90%;
             }
         }
     }
+}
+
+/* Media para promociones */
+
+@media screen and (max-width: 450px){
+    .main-promo{
+        margin-top: 140px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .promo-principal{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            
+            img{
+                width: 300px;
+            }
+            p{
+                width: 300px;
+            }
+        }
+
+        .promo-2-3{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+/* Media para contactame */
+
+@media screen and (max-width: 450px){
+
+    .main-contactame{
+        margin-top: 130px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        h2{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            width: 320px;
+        }
+        .me-direccion{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width: 300px;
+                height: auto;
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+
+        .main-form {
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+            @include flex-center;
+    
+            .input-text{
+                font-size: 14px;
+                width: 300px;
+    
+                &::placeholder{
+                    font-size: 14px;
+                }
+            }
+
+            .send-button{
+                border: solid 1px black;
+                border-radius: 5px;
+                font-size: 20px;
+                font-weight: bolder;
+                text-align: center;
+                padding: 10px;
+                width: 100px;
+                height: 45px;
+                display: block;
+                margin-top: 10px;
+    
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.2);
+                    font-size: 22px;
+                    border: solid 2px black;
+                }
+            }
+        }
+}
 }

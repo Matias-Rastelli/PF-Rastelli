@@ -14,6 +14,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(15, 15, 15, 0.15); }
+  header div {
+    margin-left: 10%; }
   header nav ul {
     display: flex;
     justify-content: flex-end;
@@ -244,7 +246,7 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  gap: 50px;
+  gap: 100px;
   margin: 5vh 0; }
   .main-quienes-somos section {
     display: flex; }
@@ -259,7 +261,8 @@ footer {
       width: 400px;
       height: 600px;
       background-color: white;
-      border-radius: 10px; }
+      border-radius: 10px;
+      cursor: pointer; }
       .main-quienes-somos .section-quienes-somos div img {
         transition: 0.8s cubic-bezier(0.395, 0.845, 0.38, 1.145);
         border-radius: 10px; }
@@ -323,11 +326,14 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
-    align-items: center; }
+    align-items: baseline; }
     .main-quienes-somos .section-objetivos div {
-      width: 20%;
+      width: 25%;
       justify-content: center;
-      align-content: space-around; }
+      align-content: space-around;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 20px;
+      border-radius: 10px; }
       .main-quienes-somos .section-objetivos div h4 {
         font-size: 20px;
         font-weight: bold;
@@ -340,6 +346,8 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly; }
+  .main-promo figure:hover {
+    box-shadow: 0px 0px 19px 2px rgba(255, 255, 255, 0.75); }
   .main-promo section {
     display: flex; }
   .main-promo .promo-principal {
@@ -402,16 +410,53 @@ footer {
       border-radius: 2px; }
     .main-tratamientos article:nth-child(even) {
       flex-direction: row-reverse; }
+      .main-tratamientos article:nth-child(even) p {
+        text-align: right; }
   .main-tratamientos figure {
     width: 250px;
-    height: 184px; }
+    height: 190px;
+    position: relative; }
     .main-tratamientos figure img {
+      position: relative;
       width: 100%;
       height: 100%; }
   .main-tratamientos p {
     width: 650px;
     font-size: 18px;
     text-align: left; }
+
+.tratamiento1:hover::after, .tratamiento2:hover::after, .tratamiento3:hover::after, .tratamiento4:hover::after, .tratamiento5:hover::after, .tratamiento6:hover::after {
+  opacity: 1; }
+
+.tratamiento1::after, .tratamiento2::after, .tratamiento3::after, .tratamiento4::after, .tratamiento5::after, .tratamiento6::after {
+  content: "Masaje Sueco";
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.2); }
+
+.tratamiento2::after {
+  content: "Masaje de piernas"; }
+
+.tratamiento3::after {
+  content: "Tratamiento facial"; }
+
+.tratamiento4::after {
+  content: "Masaje con piedras calientes"; }
+
+.tratamiento5::after {
+  content: "Masaje con mascarilla de barro"; }
+
+.tratamiento6::after {
+  content: "Masaje de espalda"; }
 
 .main-contactame {
   display: flex;
@@ -422,8 +467,8 @@ footer {
     font-weight: bold;
     text-align: center; }
   .main-contactame .me-direccion img {
-    width: auto;
-    height: auto; }
+    width: 400px;
+    height: 400px; }
   .main-contactame .me-direccion p {
     font-size: 30px;
     font-weight: normal;
@@ -477,168 +522,301 @@ footer {
 
 /* Media para index */
 @media screen and (max-width: 1300px) {
-  .animadoEntrada {
+  .animadoEntrada, .frase, .animado, .figure1, .sector2 {
     animation: none; }
-  header img {
-    transform: scale(0.75); }
   header nav ul {
-    padding: 5px;
-    gap: 10px;
-    margin-right: 10px;
-    font-size: 16px; }
-  .footer {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "social copyright"; }
-    .footer .social ul {
-      width: 200px; }
-      .footer .social ul li {
-        transform: scale(0.75); }
-    .footer .newsletter {
-      display: none; }
-  .main .figure1 {
-    transform: scale(0.6); }
-  .main .sector1 h1 {
-    text-align: center; }
-  .main .sector1 p {
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center; }
-  .main .sector2 {
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 25px;
-    gap: 30px; }
-    .main .sector2 article {
-      width: 70%; }
-    .main .sector2 .art-fig {
-      width: 100px;
-      height: 100px;
-      display: block; }
-    .main .sector2 .art-text {
-      font-size: 12px; } }
+    font-size: 24px; }
+  header div {
+    margin-left: 0; }
+  .main {
+    gap: 40px; }
+    .main .sector1 {
+      flex-direction: column;
+      gap: 20px; }
+    .main .sector2 {
+      flex-direction: column; }
+      .main .sector2 article {
+        width: 80%; } }
 
-@media screen and (max-width: 900px) {
-  .animadoEntrada {
+@media screen and (max-width: 1100px) {
+  .animadoEntrada, .frase, .animado, .figure1, .sector2 {
     animation: none; }
   header {
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 140px;
-    padding-bottom: 10px; }
-  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    justify-content: space-evenly; }
+    header nav ul {
+      font-size: 24px;
+      width: 100%; }
+    header div {
+      margin-left: 0; }
+  footer .copyright {
+    font-size: 14px; }
+  .main-quienes-somos .section-quienes-somos {
+    flex-direction: column; }
+    .main-quienes-somos .section-quienes-somos p {
+      font-size: 18px; }
+  .main-quienes-somos .section-creemos h3 {
+    font-size: 30px;
+    font-weight: bold; }
+  .main-quienes-somos .section-creemos p {
+    width: 800px;
+    font-size: 20px; }
+  .main-tratamientos {
+    margin-top: 40px; }
+    .main-tratamientos p {
+      width: 500px;
+      font-size: 14px; }
+    .main-tratamientos figure {
+      width: 200px;
+      height: auto; }
+  .main-promo {
+    margin-top: 50px; }
+    .main-promo .promo-2-3 {
+      flex-direction: column;
+      align-items: center; }
+  .main-contactame {
+    margin-top: 30px; }
+    .main-contactame h2 {
+      font-size: 40px; } }
+
+@media screen and (max-width: 900px) {
+  .animadoEntrada, .frase, .animado, .figure1, .sector2 {
+    animation: none; } }
+
+@media screen and (max-width: 450px) {
+  .animadoEntrada, .frase, .animado, .figure1, .sector2 {
+    animation: none; }
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    justify-content: space-evenly; }
+    header div {
+      margin: 0; }
+    header nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      gap: 5px; }
+  .main {
+    margin-top: 110px;
+    gap: 20px;
+    margin-bottom: 25px; }
+    .main .sector1 {
+      flex-direction: column; }
+      .main .sector1 div {
+        width: 90%; }
+        .main .sector1 div h1 {
+          font-size: 50px; }
+        .main .sector1 div p {
+          font-size: 16px;
+          white-space: normal;
+          text-align: center; }
+      .main .sector1 img {
+        height: 250px;
+        width: auto; }
+    .main section {
+      flex-direction: column;
+      gap: 5px; }
+      .main section article {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 5px; }
+        .main section article figure {
+          height: 122px; }
+        .main section article p {
+          font-size: 12px; }
+  .figure1 {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: auto; }
+    .figure1::after {
+      display: none; }
+    .figure1::before {
+      content: "Tratamientos";
+      position: absolute;
+      bottom: 5px;
+      left: 25px;
+      z-index: 1;
+      font-size: 30px;
+      font-weight: bold; }
+  footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "social" "copyright"; }
-    .footer .social ul {
-      width: 200px; }
-      .footer .social ul li {
-        transform: scale(0.75); }
-    .footer .newsletter {
+    footer .newsletter {
       display: none; }
-  .main .sector1 h1 {
-    text-align: center; }
-  .main .sector1 p {
-    font-size: 20px;
-    font-weight: normal;
-    text-align: center; }
-  .main .sector1 .figure1 {
-    transform: scale(0.6); }
-  .main .sector2 {
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 25px;
-    gap: 30px; }
-    .main .sector2 article {
-      width: 70%; }
-    .main .sector2 .art-fig {
-      width: 100px;
-      height: 100px;
-      display: block; }
-    .main .sector2 .art-text {
-      font-size: 12px; } }
-
-@media screen and (max-width: 600px) {
-  .animadoEntrada {
-    animation: none; }
-  header {
-    justify-content: start;
-    flex-wrap: nowrap; }
-    header img {
-      transform: scale(1); }
-    header nav ul {
-      flex-direction: column;
-      padding: 5px;
-      gap: 10px;
-      margin-right: 10px;
-      font-size: 16px; }
-    header .active {
-      border: none; }
-  .main .sector1 {
-    flex-direction: column;
-    gap: 20px; }
-    .main .sector1 h1 {
-      margin-top: 20px; }
-    .main .sector1 p {
-      margin-bottom: 10px; } }
+    footer .social {
+      margin-top: 10px; } }
 
 /* Media para tratamientos */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 450px) {
   .main-tratamientos {
+    margin-top: 130px;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
-    gap: 4px;
-    margin: 8px 0px; }
-    .main-tratamientos figure img {
-      width: 150px;
-      height: auto; }
-    .main-tratamientos article p {
-      width: 650px;
+    justify-content: center;
+    gap: 20px; }
+    .main-tratamientos article {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      border-bottom: 1px solid black;
+      gap: 5px; }
+      .main-tratamientos article:nth-child(even) {
+        flex-direction: column; }
+        .main-tratamientos article:nth-child(even) p {
+          text-align: justify; }
+    .main-tratamientos figure {
+      width: 300px; }
+    .main-tratamientos p {
       font-size: 14px;
-      text-align: left; } }
+      width: 300px; }
+  .tratamiento1::after, .tratamiento2::after, .tratamiento3::after, .tratamiento4::after, .tratamiento5::after, .tratamiento6::after {
+    display: none; }
+  .tratamiento1::before, .tratamiento2::before, .tratamiento3::before, .tratamiento4::before, .tratamiento5::before, .tratamiento6::before {
+    content: "Masaje Sueco";
+    z-index: 1;
+    position: absolute;
+    font-size: 20px;
+    top: 2px;
+    left: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px; }
+  .tratamiento2::before {
+    content: "Masaje de piernas"; }
+  .tratamiento3::before {
+    content: "Tratamiento facial"; }
+  .tratamiento4::before {
+    content: "Masaje con piedras calientes"; }
+  .tratamiento5::before {
+    content: "Masaje con mascarilla de barro"; }
+  .tratamiento6::before {
+    content: "Masaje de espalda"; } }
 
-@media screen and (max-width: 900px) {
-  .main-tratamientos {
+/* Media para quienes somos */
+@media screen and (max-width: 450px) {
+  .main-quienes-somos {
+    margin-top: 130px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: stretch;
-    gap: 4px;
-    margin-top: 35px; }
-    .main-tratamientos figure img {
-      width: 150px;
-      height: auto; }
-    .main-tratamientos article {
-      align-items: flex-start; }
-      .main-tratamientos article p {
-        height: 150px;
-        width: 650px;
-        font-size: 12px;
-        text-align: left; } }
+    flex-direction: column; }
+    .main-quienes-somos .section-quienes-somos {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; }
+      .main-quienes-somos .section-quienes-somos div {
+        width: 300px;
+        height: 450px; }
+      .main-quienes-somos .section-quienes-somos p {
+        font-size: 18px;
+        width: 300px; }
+    .main-quienes-somos .section-creemos {
+      gap: 10px; }
+      .main-quienes-somos .section-creemos h3 {
+        font-size: 24px;
+        width: 300px;
+        text-align: center; }
+      .main-quienes-somos .section-creemos p {
+        font-size: 18px;
+        width: 300px;
+        text-align: justify; }
+    .main-quienes-somos .section-objetivos {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; }
+      .main-quienes-somos .section-objetivos div {
+        width: 90%; } }
 
-@media screen and (max-width: 600px) {
-  .main-tratamientos {
+/* Media para promociones */
+@media screen and (max-width: 450px) {
+  .main-promo {
+    margin-top: 140px;
+    margin-bottom: 40px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px; }
+    .main-promo .promo-principal {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      gap: 15px;
+      justify-content: center;
+      align-items: center; }
+      .main-promo .promo-principal img {
+        width: 300px; }
+      .main-promo .promo-principal p {
+        width: 300px; }
+    .main-promo .promo-2-3 {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 5px; }
+      .main-promo .promo-2-3 img {
+        width: 300px; } }
+
+/* Media para contactame */
+@media screen and (max-width: 450px) {
+  .main-contactame {
+    margin-top: 130px;
+    margin-bottom: 40px;
+    display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: stretch;
-    gap: 4px;
-    margin-top: 35px; }
-    .main-tratamientos figure img {
-      width: 300px;
-      height: auto; }
-    .main-tratamientos article {
+    align-items: center; }
+    .main-contactame h2 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      width: 320px; }
+    .main-contactame .me-direccion {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .main-contactame .me-direccion img {
+        width: 300px;
+        height: auto; }
+      .main-contactame .me-direccion p {
+        font-size: 22px; }
+    .main-contactame .main-form {
+      display: flex;
+      gap: 40px;
       flex-direction: column;
       justify-content: center;
-      display: flex;
-      flex-wrap: wrap;
-      align-content: center;
-      align-items: center; }
-      .main-tratamientos article p {
-        height: 150px;
-        width: 650px;
+      align-items: center;
+      align-content: center; }
+      .main-contactame .main-form .input-text {
         font-size: 14px;
-        text-align: center; } }
+        width: 300px; }
+        .main-contactame .main-form .input-text::placeholder {
+          font-size: 14px; }
+      .main-contactame .main-form .send-button {
+        border: solid 1px black;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+        width: 100px;
+        height: 45px;
+        display: block;
+        margin-top: 10px; }
+        .main-contactame .main-form .send-button:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+          font-size: 22px;
+          border: solid 2px black; } }

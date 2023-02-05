@@ -20,17 +20,23 @@
 
         &:nth-child(even){
             flex-direction: row-reverse;
+            p{
+                text-align: right;
+            }
         }        
         }
 
     figure {
         width: 250px;
-        height: 184px;
+        height: 190px;
+        position: relative;
+
         
         img{
+        position: relative;
         width: 100%;
-        height: 100%;
-    }
+        height: 100%;    
+        }
     }
     p{
         width: 650px;
@@ -38,3 +44,57 @@
         text-align: left;
     }
 }
+    
+
+    .tratamiento1{
+        &:hover::after{
+            opacity: 1;
+        }
+        
+        &::after{
+            content: "Masaje Sueco";
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;   
+            background-color: rgba(255, 255, 255, 0.2);
+        }      
+    }
+
+    .tratamiento2{
+        @extend .tratamiento1;
+        &::after{
+            content: "Masaje de piernas";
+        }
+    }
+    .tratamiento3{
+        @extend .tratamiento1;
+        &::after{
+            content: "Tratamiento facial";
+        }
+    }
+    .tratamiento4{
+        @extend .tratamiento1;
+        &::after{
+            content: "Masaje con piedras calientes";
+        }
+    }
+    .tratamiento5{
+        @extend .tratamiento1;
+        &::after{
+            content: "Masaje con mascarilla de barro";
+        }
+    }
+    .tratamiento6{
+        @extend .tratamiento1;
+        &::after{
+            content: "Masaje de espalda";
+        }
+    }
